@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="22dp"
+    >
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Select Option"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+
+    <EditText
+        android:layout_below="@id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edTypeMessage"
+        android:hint="Type Message"
+        android:background="@null"
+        android:layout_margin="16dp"
+        />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/edTypeMessage"
+        android:background="@android:color/darker_gray"
+        />
+
+    <LinearLayout
+        android:id="@+id/layoutIcons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_below="@id/view"
+        >
+
+        <ImageView
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:id="@+id/cameraIcon"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_camera_alt_24"
+            android:layout_gravity="center"
+            app:tint="@android:color/darker_gray" />
+
+
+        <ImageView
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:id="@+id/videoIcon"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_videocam_24"
+            android:layout_gravity="center"
+            app:tint="@android:color/darker_gray"
+            />
+
+
+        <ImageView
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:id="@+id/voiceIcon"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_btn_speak_now"
+            android:layout_gravity="center"
+            />
+
+        <ImageView
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:id="@+id/textIcon"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_title_24"
+            android:layout_gravity="center"
+            />
+
+
+
+
+    </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:weightSum="4"
+      android:layout_below="@+id/layoutIcons"
+      >
+      <TextView
+          android:layout_weight="1"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:id="@+id/screenshotCounts"
+          android:text=""
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:layout_below="@+id/layoutIcons"
+          android:layout_marginTop="12dp"
+          android:layout_marginLeft="12dp"
+          />
+
+     <TextView
+          android:layout_weight="1"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:id="@+id/videoCounts"
+          android:text=""
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:layout_below="@+id/layoutIcons"
+          android:layout_marginTop="12dp"
+          android:layout_marginLeft="12dp"
+          />
+
+     <TextView
+          android:layout_weight="1"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:id="@+id/voiceCounts"
+          android:text=""
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:layout_below="@+id/layoutIcons"
+          android:layout_marginTop="12dp"
+          android:layout_marginLeft="12dp"
+          />
+
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:layout_weight="1"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:id="@+id/btnGo"
+          android:text="Go"
+          android:textAllCaps="false"
+          android:layout_below="@id/layoutIcons"
+          android:layout_alignParentRight="true"
+          android:layout_marginTop="6dp"
+          android:layout_marginRight="6dp"
+          />
+
+
+  </LinearLayout>
+
+</RelativeLayout>
